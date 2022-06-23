@@ -115,5 +115,18 @@ namespace TesteBackend
             Assert.AreEqual(HttpStatusCode.Created, response.StatusCode);
         }
 
+        [TestCase(TestName = "Criar usuário - Sucesso 3pppp2")]
+        public void CriarUsuario_Sucesppppso32()
+        {
+            //Arrange - Os pré requisitos do teste
+            UsuarioRequest bodyRequest = usuarioRequest.RetornarRequisicao();
+
+            //Act - De fato vamos fazer nosso teste            
+            IRestResponse response = runner.ExecuteRestCall(Method.POST, null, bodyRequest);
+
+            //Assert - Onde fazemos as nossas validações
+            Assert.AreEqual(HttpStatusCode.Created, response.StatusCode);
+        }
+
     }
 }
